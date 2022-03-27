@@ -19,7 +19,7 @@ Widget::Widget(QWidget *parent) :
         // 将抓取到的帧，转换为QImage格式 QImage::Format_RGB888不同的摄像头用不同的格式
         QImage image = QImage((const uchar*)frame->imageData, frame->width, frame->height, QImage::Format_RGB888).rgbSwapped();
         ui->label->setPixmap(QPixmap::fromImage(image));  // 将图片显示到label上
-    }
+    }//lambad函数
     );//将定时器和图像显示关联
 }
 
